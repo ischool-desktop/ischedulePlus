@@ -1,0 +1,161 @@
+﻿'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\ischooldiag.exe'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.Presentation.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\assembly\GAC_MSIL\DevComponents.DotNetBar2\9.5.0.1__7eb7c3a35b91de04\DevComponents.DotNetBar2.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.Authentication.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.Permission.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms.resources\v4.0_4.0.0.0_zh-Hant_b77a5c561934e089\System.Windows.Forms.resources.dll'
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.Core.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.DSAClient.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_zh-Hant_b77a5c561934e089\mscorlib.resources.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.DSAUtil.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Security\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Security.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualBasic\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Management\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Management.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.resources\v4.0_4.0.0.0_zh-Hant_b77a5c561934e089\System.resources.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\ischool.exe'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\assembly\GAC_MSIL\ActiproSoftware.SyntaxEditor.Net20\4.0.262.0__21a821480e210563\ActiproSoftware.SyntaxEditor.Net20.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\assembly\GAC_MSIL\ActiproSoftware.Shared.Net20\1.0.93.0__36ff2196ab5654b9\ActiproSoftware.Shared.Net20.dll'
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\assembly\GAC_MSIL\ActiproSoftware.WinUICore.Net20\1.0.93.0__1eba893a2bc55de5\ActiproSoftware.WinUICore.Net20.dll'
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Design\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Design.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\Aspose.BarCode.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\Aspose.Cells.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\Aspose.Words.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\DataRationality.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\DiscussionForumModule.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\DocValidate.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\Framework.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Common.DotNetBar.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\iAccess.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\components\DevComponents.DotNetBar2-old.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\IntelliSchool.DSA.ClientFramework.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\iQuery.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\iRationality.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.BusinessLogic.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.Course.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.Data.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.Synchronization.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.DataRationality.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.DeleteStudentTeacher.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.EduAdminDataMapping.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.UDT.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.Form.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.General.Feedback.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.Logic.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12.Presentation.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12BatchStudentSemesterHistory.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\K12SwapAttendStudent.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\OnlineUpdateClient.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\ReportHelper.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SHSchool.Affair.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Customization.PlugIn.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SHSchool.BusinessLogic.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SHSchool.Data.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SHSchool.DataRationality.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SHSchoolLoader.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SHStatus.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SkypeControl.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.AccessControl.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.API.PlugIn.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Broadcaster.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Common.Aspose.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Common.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Core.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Customization.Data.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.ePaper.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Core.General.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.Core.HS.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.ErrorReporting.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchoolLoader\SmartSchool.ExceptionHandler.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\ClassExamReport.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\ClassSemesterScoreReportFixed_SH.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\ExamReport.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SchoolYearScoreReportNew.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SHCourseScoreInputStatus.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SHSchool.Rating.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SHStaticRank.Data.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SHStaticRank2.Data.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SH_SemesterScoreReport.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\SmartSchool.Evaluation.HS.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\StudentCourseScoreCheck100_SH.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHEvaluation\Test.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\CustomizationPlugInLoader\CustomizationPlugInLoader.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchool.Behavior.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchool.DailyManifestation.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchool.KeptInSchoolAnAdviceNote.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHSchool.SemesterMoralScoreCalc.past.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\assembly\GAC_MSIL\ActiproSoftware.SyntaxEditor.Addons.Web.Net20\4.0.262.0__21a821480e210563\ActiproSoftware.SyntaxEditor.Addons.Web.Net20.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Aspose.Pdf.dll'
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Configuration.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Diagnostics.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.DocumentValidator.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Import.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Log.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Query.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Windows.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Report.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\Campus\Campus.Validator.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\MOD_NetworkPerformanceCounter\NetworkPerformanceCounter.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHDayPermrec_D\OfficialStudentRecord.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHDayPermrec_D\SHStudentCard.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHDayPermrec_D\SmartSchool.GovernmentalDocument.HS.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHDayPermrec_D\UpdateRecordModule_SH_D.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\SHDayPermrec_D\UpdateRecordViewForm.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\MOD_Tagging\Customization.Tagging.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\MOD_Tagging\Tagging.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\modules\MOD_DataMaintain\DataMaintain.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\TFServer2010\Shared\ischedulePlus\bin\Debug\ischedulePlus.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\defaultmodules\DynamicPackages.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\defaultmodules\GreeningManagementTools.dll'，已載入符號。
+'<沒有名稱>' (0xe30) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x15bc) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x103c) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x1354) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x1184) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x14ac) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0xfcc) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x1b18) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0xc3c) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x14bc) 執行緒以返回碼 0 (0x0) 結束。
+'<沒有名稱>' (0x1c24) 執行緒以返回碼 0 (0x0) 結束。
+第一個可能發生的例外狀況類型 'System.IO.FileNotFoundException' 發生於 System.Xml.dll
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\assembly\GAC\Microsoft.mshtml\7.0.3300.0__b03f5f7f11d50a3a\Microsoft.mshtml.dll'
+'<沒有名稱>' (0x1eb4) 執行緒以返回碼 0 (0x0) 結束。
+第一個可能發生的例外狀況類型 'System.ArgumentException' 發生於 System.Windows.Forms.dll
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\ischool\kernel\FISCA.Data.dll'，已載入符號。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+'ischooldiag.exe' (Managed (v4.0.30319)): 已載入 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll'，並略過載入符號。模組已最佳化，並已啟用 [Just My Code] 偵錯工具選項。
+第一個可能發生的例外狀況類型 'FISCA.DSAClient.DSAServerException' 發生於 FISCA.DSAClient.dll
+第一個可能發生的例外狀況類型 'FISCA.DSAUtil.DSAServerException' 發生於 FISCA.DSAUtil.dll
+第一個可能發生的例外狀況類型 'System.Threading.ThreadAbortException' 發生於 System.Windows.Forms.dll
+第一個可能發生的例外狀況類型 'FISCA.DSAClient.DSAServerException' 發生於 FISCA.DSAClient.dll
+第一個可能發生的例外狀況類型 'FISCA.DSAUtil.DSAServerException' 發生於 FISCA.DSAUtil.dll
+第一個可能發生的例外狀況類型 'System.Threading.ThreadAbortException' 發生於 FISCA.dll
+'System.Threading.ThreadAbortException' 類型的例外狀況發生於 FISCA.dll，但使用者程式碼未加以處理
+'<沒有名稱>' (0x1930) 執行緒以返回碼 0 (0x0) 結束。
+'[7872] ischooldiag.exe: 程式追蹤' 程式以返回碼 0 (0x0) 結束。
+'[7872] ischooldiag.exe: Managed (v4.0.30319)' 程式以返回碼 0 (0x0) 結束。

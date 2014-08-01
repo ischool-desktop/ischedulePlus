@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="format.xsl" ?>
+<ValidateRule Name="課程行事曆">
+
+    <DuplicateDetection>
+        <Detector Name="組合鍵值">
+            <Field Name="教師名稱" />
+            <Field Name="開始日期" />
+            <Field Name="開始時間" />
+        </Detector>
+    </DuplicateDetection>
+
+    <FieldList>
+	
+        <Field Required="True" EmptyAlsoValidate="False"  Name="課程名稱" Description="課程名稱">
+            <Validate AutoCorrect="False" Description="「課程名稱」不允許空白。" ErrorType="Error" Validator="不可空白" When="" />
+        </Field>     
+
+        <Field Required="True" EmptyAlsoValidate="False" Name="學年度" Description="學年度">
+            <Validate AutoCorrect="False" Description="「學年度」不允許空白。" ErrorType="Error" Validator="不可空白" When="" />
+            <Validate AutoCorrect="False" Description="「學年度」必須是數字。" ErrorType="Error" Validator="Integer極限" When="" />
+        </Field>
+        
+        <Field Required="True" EmptyAlsoValidate="False" Name="學期" Description="學期(1,2)">
+            <Validate AutoCorrect="False" Description="「學期」不允許空白。" ErrorType="Error" Validator="不可空白" When="" />
+            <Validate AutoCorrect="False" Description="「學期」只允許「1、2」。" ErrorType="Error" Validator="學期列舉" When="" />
+        </Field>
+
+	<Field Required="True" Name="科目名稱" Description="">
+            <Validate AutoCorrect="False" Description="「科目名稱」不允許空白。" ErrorType="Error" Validator="不可空白" When="" />
+        </Field>
+
+	<Field Required="True" EmptyAlsoValidate="False" Name="科目級別" Description="">
+            <Validate AutoCorrect="False" Description="「科目級別」必須是數字。" ErrorType="Error" Validator="Integer極限" When="" />
+        </Field>
+
+	<Field Required="True" Name="教師名稱" Description="">
+            <Validate AutoCorrect="False" Description="「教師名稱」不存在系統中。" ErrorType="Warning" Validator="教師名稱是否存在" When="" />
+	</Field>
+
+	<Field Required="True" EmptyAlsoValidate="False" Name="班級名稱" Description="">
+            <Validate AutoCorrect="False" Description="「班級名稱」不存在系統中。" ErrorType="Warning" Validator="班級名稱是否存在" When="" />
+	</Field>
+
+        <Field Required="True" Name="場地名稱" Description="場地名稱">
+
+        </Field>
+
+	<Field Required="True" Name="開始日期" Description="開始日期">
+        	<Validate AutoCorrect="True" Description="「開始日期」格式不正確，建議使用西元「年/月/日」例如「2012/12/21」。" ErrorType="Error" Validator="合法日期" When=""/>
+	</Field>
+
+	<Field Required="True" Name="開始時間" Description="開始時間">
+            <Validate AutoCorrect="False" Description="「開始時間」格式範例「08:10」。" ErrorType="Error" Validator="時間格式" When="" />
+	</Field>
+<!--
+	<Field Required="True" Name="結束日期" Description="結束日期">
+		<Validate AutoCorrect="True" Description="「結束日期」格式不正確，建議使用西元「年/月/日」例如「2012/12/21」。" ErrorType="Error" Validator="合法日期" When=""/>
+	</Field>
+-->
+
+	<Field Required="True" Name="結束時間" Description="結束時間">
+            <Validate AutoCorrect="False" Description="「開始時間」格式範例「08:10」。" ErrorType="Error" Validator="時間格式" When="" />
+	</Field>
+<!--
+        <Field Required="True" Name="星期" EmptyAlsoValidate="False" Description="若填入空白代表不排課，實際儲存的值為0" >
+	     <Validate AutoCorrect="True" Description="「星期」只允許「1」到「7」。 " ErrorType="Error" Validator="星期列舉" When="" />
+        </Field>
+-->		
+        <Field Required="True" Name="節次" Description="節次(1-20)">
+            <Validate AutoCorrect="False" Description="「節次」只允許「1」到「20」。" ErrorType="Error" Validator="Integer1-20" When="" />
+        </Field>	
+				
+	
+        <Field Required="False" Name="註記" Description="課程行事曆的註解。">
+        </Field>
+	
+    </FieldList>
+    <ValidatorList>
+
+	<!--<RowValidator Name="檢查日期範圍" Type="iDateRangeCheck" />-->
+        
+	<RowValidator Name="檢查時間範圍" Type="iTimeRangeCheck" />
+        <RowValidator Name="課程鍵值是否存在" Type="iCourseNameCheck"/>
+
+        <FieldValidator Name="時間格式" Type="iTimeFormatCheck"/>
+        <FieldValidator Name="教師名稱是否存在" Type="iTeacherNameCheck"/>
+	<FieldValidator Name="班級名稱是否存在" Type="iClassNameCheck"/>
+	
+        <FieldValidator Name="不可空白" Type="STRINGLENGTH">
+            <MinLength>1</MinLength>
+        </FieldValidator>
+
+        <FieldValidator Name="學期列舉" Type="Enumeration">
+            <Item Value="1" />
+            <Item Value="2" />
+            <Item Value="3" />
+            <Item Value="4" />
+        </FieldValidator>
+		
+        <FieldValidator Name="只能為是列舉" Type="Enumeration">
+            <Item Value="是">
+                <Variation>TRUE</Variation>
+                <Variation>True</Variation>
+                <Variation>true</Variation>
+                <Variation>YES</Variation>
+                <Variation>Yes</Variation>
+                <Variation>yes</Variation>
+                <Variation>Y</Variation>
+                <Variation>y</Variation>
+                <Variation>1</Variation>
+            </Item>
+            <Item Value="">
+                <Variation>否</Variation>
+                <Variation>FALSE</Variation>
+                <Variation>False</Variation>
+                <Variation>false</Variation>
+                <Variation>NO</Variation>
+                <Variation>No</Variation>
+                <Variation>no</Variation>
+                <Variation>N</Variation>
+                <Variation>n</Variation>
+                <Variation>0</Variation>
+            </Item>
+        </FieldValidator>
+
+        <FieldValidator Name="單雙週列舉" Type="Enumeration">
+            <Item Value="單" >
+				<Variation>單週</Variation>
+				<Variation>1</Variation>
+			</Item>
+            <Item Value="雙">
+				<Variation>雙週</Variation>
+				<Variation>2</Variation>
+			</Item>
+            <Item Value="單雙">
+				<Variation>單雙週</Variation>
+				<Variation>3</Variation>
+			</Item>
+        </FieldValidator>
+		
+        <FieldValidator Name="星期列舉" Type="Enumeration">
+            <Item Value="1">
+                <Variation>一</Variation>
+                <Variation>Ⅰ</Variation>
+            </Item>
+            <Item Value="2">
+                <Variation>二</Variation>
+                <Variation>Ⅱ</Variation>
+            </Item>
+            <Item Value="3">
+                <Variation>三</Variation>
+                <Variation>Ⅲ</Variation>
+            </Item>
+            <Item Value="4">
+                <Variation>四</Variation>
+                <Variation>Ⅳ</Variation>
+            </Item>
+            <Item Value="5">
+                <Variation>五</Variation>
+                <Variation>Ⅴ</Variation>
+            </Item>
+            <Item Value="6">
+                <Variation>六</Variation>
+                <Variation>Ⅵ</Variation>
+            </Item>
+            <Item Value="7">
+                <Variation>七</Variation>
+                <Variation>Ⅶ</Variation>
+            </Item>
+        </FieldValidator>
+				
+	<FieldValidator Name="Integer1-20" Type="Integer">
+		<MinValue>1</MinValue>
+		<MaxValue>20</MaxValue>
+	</FieldValidator>
+		
+        <FieldValidator Name="Integer極限" Type="Integer">
+            <MinValue>0</MinValue>
+            <MaxValue>2000000000</MaxValue>
+        </FieldValidator>
+
+	<FieldValidator Name="合法日期" Type="MixDate">
+	    <!-- Gregorian | Taiwan-->
+	    <!-- Pattern 中需要 Year,Month,Day 三個 Group。-->
+	    <!-- 2007/8/8 (年/月/日) -->
+	    <ValidPattern DateType="Gregorian">
+	        <![CDATA[^(?<Year>[0-9]{4})/(?<Month>[0-9]{1,2})/(?<Day>[0-9]{1,2})$]]>
+	    </ValidPattern>
+	    <Matchs CorrectTo="yyyy/MM/dd">
+	        <!-- 96/8/8 (年/月/日)-->
+	        <Match DateType="Taiwan"><![CDATA[^(?<Year>1?[0-9]{2})/(?<Month>[0-9]{1,2})/(?<Day>[0-9]{1,2})$]]></Match>
+	        <!-- 96-8-8 (年-月-日)-->
+	        <Match DateType="Taiwan"><![CDATA[^(?<Year>1?[0-9]{2})-(?<Month>[0-9]{1,2})-(?<Day>[0-9]{1,2})$]]></Match>
+	        <!-- 960808 (年月日)-->
+	        <Match DateType="Taiwan"><![CDATA[^(?<Year>1?[0-9]{2})(?<Month>[0-9]{2})(?<Day>[0-9]{2})$]]></Match>
+	        <!-- 2007-8-8 (年/月/日)-->
+	        <Match DateType="Gregorian"><![CDATA[^(?<Year>[0-9]{4})-(?<Month>[0-9]{1,2})-(?<Day>[0-9]{1,2})$]]></Match>
+	        <!-- 8-8-2007 (月/日/年)-->
+	        <Match DateType="Gregorian"><![CDATA[^(?<Month>[0-9]{1,2})-(?<Day>[0-9]{1,2})-(?<Year>[0-9]{4})$]]></Match>
+	        <!-- 20070812 (年月日)-->
+	        <Match DateType="Gregorian"><![CDATA[^(?<Year>[0-9]{4})(?<Month>[0-9]{2})(?<Day>[0-9]{2})$]]></Match>
+	    </Matchs>
+	</FieldValidator>
+
+    </ValidatorList>
+    <RowValidate>
+    <Validate AutoCorrect="False" Description="「課程名稱」、「學年度」加「學期」組合不存在於系統中。" ErrorType="Warning" Validator="課程鍵值是否存在" When=""/>
+	<Validate AutoCorrect="False" Description="「結束時間要大於開始時間」。" ErrorType="Error" Validator="檢查時間範圍" When=""/>
+	<!--<Validate AutoCorrect="False" Description="「結束日期要大於等於開始日期」。" ErrorType="Error" Validator="檢查日期範圍" When=""/>-->
+    </RowValidate>
+    <ConditionList />
+</ValidateRule>

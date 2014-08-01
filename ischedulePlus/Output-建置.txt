@@ -1,0 +1,12 @@
+﻿1>------ 已開始建置: 專案: ischedulePlus, 組態: Debug Any CPU ------
+1>C:\TFServer2010\Shared\ischedulePlus\BL\Calendar.cs(735,30,735,31): warning CS0168: 已宣告變數 'e' 但從未使用
+1>C:\TFServer2010\Shared\ischedulePlus\Export\frmCreateCourseCalendarConfirm.cs(165,25,165,33): warning CS0219: 已指派變數 'RowLimit'，但從未使用其值
+1>C:\TFServer2010\Shared\ischedulePlus\Export\frmCreateCourseCalendarConfirm.cs(166,25,166,34): warning CS0219: 已指派變數 'RowOffset'，但從未使用其值
+1>C:\TFServer2010\Shared\ischedulePlus\Windows\frmExchangeConfirm.cs(403,90,403,102): warning CS0429: 偵測到不可能執行到的運算式程式碼
+1>C:\TFServer2010\Shared\ischedulePlus\Export\frmFoxproCreateWeekCourseSection.cs(22,46,22,66): warning CS0169: 從未使用欄位 'ischedulePlus.frmFoxproCreateWeekCourseSection.mSchoolSemesterDates'
+1>C:\TFServer2010\Shared\ischedulePlus\Export\frmFoxproCreateWeekCourseSection.cs(23,40,23,65): warning CS0169: 從未使用欄位 'ischedulePlus.frmFoxproCreateWeekCourseSection.mSelectSchoolYearSemester'
+1>C:\TFServer2010\Shared\ischedulePlus\Export\frmScheduleExport.cs(21,33,21,36): warning CS0169: 從未使用欄位 'ischedulePlus.frmScheduleExport.sdr'
+1>C:\TFServer2010\Shared\ischedulePlus\Windows\Class\ClassEditor.cs(31,21,31,38): warning CS0169: 從未使用欄位 'ischedulePlus.ClassEditor.mSelectedRowIndex'
+1>C:\TFServer2010\Shared\ischedulePlus\Windows\Teacher\TeacherEditor.cs(37,21,37,38): warning CS0169: 從未使用欄位 'ischedulePlus.TeacherEditor.mSelectedRowIndex'
+1>C:\TFServer2010\Shared\ischedulePlus\Windows\Teacher\TeacherEditor.cs(38,22,38,27): warning CS0414: 已指派欄位 'ischedulePlus.TeacherEditor.mTask'，但從未使用其值
+========== 建置: 1 成功、0 失敗、0 最新、0 略過 ==========

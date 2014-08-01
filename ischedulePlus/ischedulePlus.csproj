@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9756D2D5-4ECF-4654-8E3D-6B6BC6903539}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ischedulePlus</RootNamespace>
+    <AssemblyName>ischedulePlus</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\..\ischool\modules\Campus\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Configuration">
+      <HintPath>..\..\..\ischool\modules\Campus\Campus.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.DocumentValidator">
+      <HintPath>..\..\..\ischool\modules\Campus\Campus.DocumentValidator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Import">
+      <HintPath>..\..\..\ischool\modules\Campus\Campus.Import.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Report">
+      <HintPath>..\..\..\ischool\modules\Campus\Campus.Report.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Validator">
+      <HintPath>..\..\..\ischool\modules\Campus\Campus.Validator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Windows">
+      <HintPath>..\..\..\ischool\modules\Campus\Campus.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\ischool\components\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FISCA">
+      <HintPath>..\..\..\ischool\kernel\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication">
+      <HintPath>..\..\..\ischool\kernel\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Data">
+      <HintPath>..\..\..\ischool\kernel\FISCA.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient">
+      <HintPath>..\..\..\ischool\kernel\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAUtil">
+      <HintPath>..\..\..\ischool\kernel\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent">
+      <HintPath>..\..\..\ischool\kernel\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Permission">
+      <HintPath>..\..\..\ischool\kernel\FISCA.Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation">
+      <HintPath>..\..\..\ischool\kernel\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.UDT">
+      <HintPath>..\..\..\ischool\kernel\FISCA.UDT.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data">
+      <HintPath>..\..\..\ischool\modules\SHSchoolLoader\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Presentation">
+      <HintPath>..\..\..\ischool\modules\SHSchoolLoader\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="ReportHelper">
+      <HintPath>..\..\..\ischool\modules\SHSchoolLoader\ReportHelper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.ErrorReporting">
+      <HintPath>..\..\..\ischool\modules\SHSchoolLoader\SmartSchool.ErrorReporting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Calendar.cs" />
+    <Compile Include="BL\CalendarRecord.cs" />
+    <Compile Include="BL\DisplayCalendarRecord.cs" />
+    <Compile Include="BL\What.cs" />
+    <Compile Include="BL\Whats.cs" />
+    <Compile Include="BL\Teacher.cs" />
+    <Compile Include="BL\TeacherBusy.cs" />
+    <Compile Include="BL\ClassBusy.cs" />
+    <Compile Include="Calendar\CalendarEvents.cs" />
+    <Compile Include="Calendar\CEvent.cs" />
+    <Compile Include="Calendar\DecCalendar.cs" />
+    <Compile Include="Calendar\DecCalendarList.cs" />
+    <Compile Include="Calendar\DecPeriod.cs" />
+    <Compile Include="Calendar\DecPeriodSuperTooltipProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Calendar\frmCalendarOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar\frmCalendarOption.Designer.cs">
+      <DependentUpon>frmCalendarOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar\PanelPool.cs" />
+    <Compile Include="Calendar\PeriodSetting.cs" />
+    <Compile Include="ContractService.cs" />
+    <Compile Include="Export\FoxproDAL\CompleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\FoxproDAL\CompleteForm.designer.cs">
+      <DependentUpon>CompleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\DataGridViewExport.cs" />
+    <Compile Include="DateTimeHelper.cs" />
+    <Compile Include="Export\DataAccess.cs" />
+    <Compile Include="Export\FoxproDAL\CourseCalendarSource.cs" />
+    <Compile Include="Export\FoxproDAL\FoClass.cs" />
+    <Compile Include="Export\FoxproDAL\FoClassroom.cs" />
+    <Compile Include="Export\FoxproDAL\FoSubject.cs" />
+    <Compile Include="Export\FoxproDAL\FoSysset.cs" />
+    <Compile Include="Export\FoxproDAL\FoTeacher.cs" />
+    <Compile Include="Export\FoxproDAL\TeacherBusyDateSource.cs" />
+    <Compile Include="Export\FoxproDAL\ClassBusyDateSource.cs" />
+    <Compile Include="Export\frmConnectionSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmConnectionSetup.designer.cs">
+      <DependentUpon>frmConnectionSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmCreateCourseCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmCreateCourseCalendar.Designer.cs">
+      <DependentUpon>frmCreateCourseCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmCreateCourseCalendarConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmCreateCourseCalendarConfirm.Designer.cs">
+      <DependentUpon>frmCreateCourseCalendarConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmFoxproConnectionSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmFoxproConnectionSetup.Designer.cs">
+      <DependentUpon>frmFoxproConnectionSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmFoxproCreateWeekCourseSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmFoxproCreateWeekCourseSection.designer.cs">
+      <DependentUpon>frmFoxproCreateWeekCourseSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\FoxproDAL\SchoolYearSemesterDateHelper.cs" />
+    <Compile Include="Export\frmCreateTeacherBusyCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmCreateTeacherBusyCalendar.Designer.cs">
+      <DependentUpon>frmCreateTeacherBusyCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmCreateTeacherBusyCalendarConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmCreateTeacherBusyCalendarConfirm.Designer.cs">
+      <DependentUpon>frmCreateTeacherBusyCalendarConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmScheduleExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmScheduleExport.designer.cs">
+      <DependentUpon>frmScheduleExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmCreateClassBusyCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmCreateClassBusyCalendar.Designer.cs">
+      <DependentUpon>frmCreateClassBusyCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmCreateClassBusyCalendarConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmCreateClassBusyCalendarConfirm.Designer.cs">
+      <DependentUpon>frmCreateClassBusyCalendarConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmExportShinHer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmExportShinHer.Designer.cs">
+      <DependentUpon>frmExportShinHer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForumAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Import\ImportClassEx.cs" />
+    <Compile Include="Import\ImportTeacherEx.cs" />
+    <Compile Include="MainForm\CalendarOption.cs" />
+    <Compile Include="MainForm\MainForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm\SchoolYearSemesterOption.cs" />
+    <Compile Include="MainForm\UserControls\usrClassroom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm\UserControls\usrClassroom.designer.cs">
+      <DependentUpon>usrClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="方便的函式庫\CalendarBindingList.cs" />
+    <Compile Include="方便的函式庫\Logs.cs" />
+    <Compile Include="方便的函式庫\Permissions.cs" />
+    <Compile Include="UDT\CancelCourseCalendar.cs" />
+    <Compile Include="UDT\ClassBusyDate.cs" />
+    <Compile Include="UDT\ClassEx.cs" />
+    <Compile Include="UDT\ClassExBusy.cs" />
+    <Compile Include="UDT\EMail.cs" />
+    <Compile Include="UDT\TeacherEx.cs" />
+    <Compile Include="MainForm\UserControls\usrClassList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm\UserControls\usrClassList.designer.cs">
+      <DependentUpon>usrClassList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\UserControls\usrTeacherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm\UserControls\usrTeacherList.designer.cs">
+      <DependentUpon>usrTeacherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UDT\TeacherExBusy.cs" />
+    <Compile Include="ValidationRule\FieldValidator\ClassInCheck.cs" />
+    <Compile Include="ValidationRule\RowValidator\TeacherNameCheck.cs" />
+    <Compile Include="ValidationRule\RowValidator\TeacherNameCheck_New.cs" />
+    <Compile Include="Windows\Class\ClassCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Class\ClassCreatorForm.designer.cs">
+      <DependentUpon>ClassCreatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Class\ClassEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Class\ClassEditor.designer.cs">
+      <DependentUpon>ClassEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Class\ClassPackage.cs" />
+    <Compile Include="Windows\Class\ClassPackageDataAccess.cs" />
+    <Compile Include="Windows\Class\Commands\ExportClassCommand.cs" />
+    <Compile Include="Windows\Class\Commands\GetClassListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Class\Commands\GetClassListForm.designer.cs">
+      <DependentUpon>GetClassListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Class\Commands\GetischoolClassList.cs" />
+    <Compile Include="Windows\Class\Commands\ImportClassCommand.cs" />
+    <Compile Include="Windows\frmAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmAbsence.Designer.cs">
+      <DependentUpon>frmAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmEMailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmEMailList.Designer.cs">
+      <DependentUpon>frmEMailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmReplaceQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmReplaceQuery.Designer.cs">
+      <DependentUpon>frmReplaceQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmUpdateClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmUpdateClassroom.Designer.cs">
+      <DependentUpon>frmUpdateClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmUpdatePeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmUpdatePeriod.Designer.cs">
+      <DependentUpon>frmUpdatePeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmUpdateTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmUpdateTeacher.Designer.cs">
+      <DependentUpon>frmUpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\AbsenceRecord.cs" />
+    <Compile Include="Windows\Report\AbsenceRecords.cs" />
+    <Compile Include="Windows\Report\ExchangeReplaceReport.cs" />
+    <Compile Include="Windows\Report\frmExchangeReplaceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceReport.Designer.cs">
+      <DependentUpon>frmExchangeReplaceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpContentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelpContentPanel.designer.cs">
+      <DependentUpon>HelpContentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\XExtensions.cs" />
+    <Compile Include="Windows\frmExchangeReplaceQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmExchangeReplaceQuery.Designer.cs">
+      <DependentUpon>frmExchangeReplaceQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmExchangeConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmExchangeConfirm.Designer.cs">
+      <DependentUpon>frmExchangeConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmExchangeReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmExchangeReplace.Designer.cs">
+      <DependentUpon>frmExchangeReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmReplaceConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmReplaceConfirm.Designer.cs">
+      <DependentUpon>frmReplaceConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\HTMLReport\frmEMailConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\HTMLReport\frmEMailConfirm.Designer.cs">
+      <DependentUpon>frmEMailConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\HTMLReport\HTMLReport.cs" />
+    <Compile Include="Windows\HTMLReport\HTMLReportRecord.cs" />
+    <Compile Include="Windows\Report\frmExchangeReplaceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceSelector.Designer.cs">
+      <DependentUpon>frmExchangeReplaceSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\frmHome.cs" />
+    <Compile Include="Windows\Report\frmHome.designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\frmTemplateConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmTemplateConfig.designer.cs">
+      <DependentUpon>frmTemplateConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmTestConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmTestConnection.Designer.cs">
+      <DependentUpon>frmTestConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ImportCourseCalendar.cs" />
+    <Compile Include="Import\ImportTeacherBusy.cs" />
+    <Compile Include="Import\TeacherBusyTimeConflictHelper.cs" />
+    <Compile Include="Library\Extensions.cs" />
+    <Compile Include="Period.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\UDTGridViewHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UDQs\ExportSunset.cs" />
+    <Compile Include="UDQs\QueryExport.cs" />
+    <Compile Include="UDT\Config.cs" />
+    <Compile Include="UDT\SchoolYearSemesterDate.cs" />
+    <Compile Include="UDT\TeacherBusyDate.cs" />
+    <Compile Include="UDT\CourseCalendar.cs" />
+    <Compile Include="Windows\Report\PeriodOption.cs" />
+    <Compile Include="Windows\Report\frmExchangeReplaceTemplateConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceTemplateConfig.designer.cs">
+      <DependentUpon>frmExchangeReplaceTemplateConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SchoolYearSemester\frmPeriodsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SchoolYearSemester\frmPeriodsSetting.Designer.cs">
+      <DependentUpon>frmPeriodsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmUpdateWeekday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmUpdateWeekday.Designer.cs">
+      <DependentUpon>frmUpdateWeekday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Teacher\Commands\ExportTeacherCommand.cs" />
+    <Compile Include="Windows\Teacher\Commands\GetischoolTeacherList.cs" />
+    <Compile Include="Windows\Teacher\Commands\GetTeacherListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Teacher\Commands\GetTeacherListForm.designer.cs">
+      <DependentUpon>GetTeacherListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Teacher\Commands\ImportTeacherCommand.cs" />
+    <Compile Include="Windows\frmCalendarQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmCalendarQuery.Designer.cs">
+      <DependentUpon>frmCalendarQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmTeacherNoBusyQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmTeacherNoBusyQuery.Designer.cs">
+      <DependentUpon>frmTeacherNoBusyQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmAbsenceConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmAbsenceConfirm.Designer.cs">
+      <DependentUpon>frmAbsenceConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="方便的函式庫\CardPanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="方便的函式庫\ConfigDataExtension.cs" />
+    <Compile Include="方便的函式庫\SortableBindingList.cs" />
+    <Compile Include="方便的函式庫\Utility.cs" />
+    <Compile Include="ValidationRule\FieldValidator\ClassNameCheck.cs" />
+    <Compile Include="ValidationRule\FieldValidator\TeacherNameFCheck.cs" />
+    <Compile Include="ValidationRule\FieldValidator\TimeFormatCheck.cs" />
+    <Compile Include="ValidationRule\RowValidator\CourseNameCheck.cs" />
+    <Compile Include="ValidationRule\RowValidator\DateRangeCheck.cs" />
+    <Compile Include="ValidationRule\RowValidator\TimeRangeCheck.cs" />
+    <Compile Include="ValidationRule\FieldValidatorFactory.cs" />
+    <Compile Include="ValidationRule\RowValidatorFactory.cs" />
+    <Compile Include="Windows\Report\frmExchangeReplaceMonthTemplateConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceMonthTemplateConfig.designer.cs">
+      <DependentUpon>frmExchangeReplaceMonthTemplateConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceSatReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceSatReport.Designer.cs">
+      <DependentUpon>frmExchangeReplaceSatReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceSatTemplateConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceSatTemplateConfig.designer.cs">
+      <DependentUpon>frmExchangeReplaceSatTemplateConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\SatRecord.cs" />
+    <Compile Include="Windows\Report\SatRecords.cs" />
+    <Compile Include="Windows\SchoolYearSemester\SchoolYearSemesterPackage.cs" />
+    <Compile Include="Windows\SchoolYearSemester\SchoolYearSemesterPackageDataAccess.cs" />
+    <Compile Include="Windows\SchoolYearSemester\SchoolYearSemesterEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\SchoolYearSemester\SchoolYearSemesterEditor.designer.cs">
+      <DependentUpon>SchoolYearSemesterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SchoolYearSemester\SchoolYearSemesterCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SchoolYearSemester\SchoolYearSemesterCreatorForm.designer.cs">
+      <DependentUpon>SchoolYearSemesterCreatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceMonthReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Report\frmExchangeReplaceMonthReport.Designer.cs">
+      <DependentUpon>frmExchangeReplaceMonthReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Teacher\TeacherCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Teacher\TeacherCreatorForm.designer.cs">
+      <DependentUpon>TeacherCreatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Teacher\TeacherEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Teacher\TeacherEditor.designer.cs">
+      <DependentUpon>TeacherEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Teacher\TeacherPackage.cs" />
+    <Compile Include="Windows\Teacher\TeacherPackageDataAccess.cs" />
+    <Compile Include="Windows\Template\CampusConfiguration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Template\CampusConfiguration.designer.cs">
+      <DependentUpon>CampusConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Template\ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Template\ConfigurationForm.designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Template\ConfigurationItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Template\ConfigurationItem.designer.cs">
+      <DependentUpon>ConfigurationItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Template\frmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Template\frmInputBox.designer.cs">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Template\IConfigurationItem.cs" />
+    <Compile Include="Windows\Template\Interface\ICommand.cs" />
+    <Compile Include="Windows\Template\Interface\IConfigurationDataAccess.cs" />
+    <Compile Include="Windows\Template\Interface\IContentEditor.cs" />
+    <Compile Include="Windows\Template\Interface\IContentViewer.cs" />
+    <Compile Include="Windows\Template\NameCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Template\NameCreatorForm.designer.cs">
+      <DependentUpon>NameCreatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Template\winConfiguration.cs" />
+    <Compile Include="Windows\TimeTable\TimeTable.cs" />
+    <Compile Include="Windows\TimeTable\TimeTableBusyEditor.cs" />
+    <Compile Include="Windows\TimeTable\TimeTableSec.cs" />
+    <Compile Include="Windows\tool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Calendar\frmCalendarOption.resx">
+      <DependentUpon>frmCalendarOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\FoxproDAL\CompleteForm.resx">
+      <DependentUpon>CompleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmConnectionSetup.resx">
+      <DependentUpon>frmConnectionSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmCreateCourseCalendar.resx">
+      <DependentUpon>frmCreateCourseCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmCreateCourseCalendarConfirm.resx">
+      <DependentUpon>frmCreateCourseCalendarConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmFoxproConnectionSetup.resx">
+      <DependentUpon>frmFoxproConnectionSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmFoxproCreateWeekCourseSection.resx">
+      <DependentUpon>frmFoxproCreateWeekCourseSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmCreateTeacherBusyCalendar.resx">
+      <DependentUpon>frmCreateTeacherBusyCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmCreateTeacherBusyCalendarConfirm.resx">
+      <DependentUpon>frmCreateTeacherBusyCalendarConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmScheduleExport.resx">
+      <DependentUpon>frmScheduleExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmCreateClassBusyCalendar.resx">
+      <DependentUpon>frmCreateClassBusyCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmCreateClassBusyCalendarConfirm.resx">
+      <DependentUpon>frmCreateClassBusyCalendarConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmExportShinHer.resx">
+      <DependentUpon>frmExportShinHer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForumAdmin.resx">
+      <DependentUpon>ForumAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpContentPanel.resx">
+      <DependentUpon>HelpContentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\UserControls\usrClassList.resx">
+      <DependentUpon>usrClassList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\UserControls\usrTeacherList.resx">
+      <DependentUpon>usrTeacherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\UserControls\usrClassroom.resx">
+      <DependentUpon>usrClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Class\ClassCreatorForm.resx">
+      <DependentUpon>ClassCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Class\ClassEditor.resx">
+      <DependentUpon>ClassEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Class\Commands\GetClassListForm.resx">
+      <DependentUpon>GetClassListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmAbsence.resx">
+      <DependentUpon>frmAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmEMailList.resx">
+      <DependentUpon>frmEMailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmExchangeConfirm.resx">
+      <DependentUpon>frmExchangeConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmExchangeReplace.resx">
+      <DependentUpon>frmExchangeReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmExchangeReplaceQuery.resx">
+      <DependentUpon>frmExchangeReplaceQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmReplaceQuery.resx">
+      <DependentUpon>frmReplaceQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmUpdateClassroom.resx">
+      <DependentUpon>frmUpdateClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmUpdatePeriod.resx">
+      <DependentUpon>frmUpdatePeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmUpdateTeacher.resx">
+      <DependentUpon>frmUpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceReport.resx">
+      <DependentUpon>frmExchangeReplaceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmReplaceConfirm.resx">
+      <DependentUpon>frmReplaceConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\HTMLReport\frmEMailConfirm.resx">
+      <DependentUpon>frmEMailConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceSelector.resx">
+      <DependentUpon>frmExchangeReplaceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmTemplateConfig.resx">
+      <DependentUpon>frmTemplateConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmTestConnection.resx">
+      <DependentUpon>frmTestConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceMonthTemplateConfig.resx">
+      <DependentUpon>frmExchangeReplaceMonthTemplateConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceSatReport.resx">
+      <DependentUpon>frmExchangeReplaceSatReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceSatTemplateConfig.resx">
+      <DependentUpon>frmExchangeReplaceSatTemplateConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceTemplateConfig.resx">
+      <DependentUpon>frmExchangeReplaceTemplateConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SchoolYearSemester\frmPeriodsSetting.resx">
+      <DependentUpon>frmPeriodsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SchoolYearSemester\SchoolYearSemesterEditor.resx">
+      <DependentUpon>SchoolYearSemesterEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SchoolYearSemester\SchoolYearSemesterCreatorForm.resx">
+      <DependentUpon>SchoolYearSemesterCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report\frmExchangeReplaceMonthReport.resx">
+      <DependentUpon>frmExchangeReplaceMonthReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Teacher\Commands\GetTeacherListForm.resx">
+      <DependentUpon>GetTeacherListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Teacher\TeacherCreatorForm.resx">
+      <DependentUpon>TeacherCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Teacher\TeacherEditor.resx">
+      <DependentUpon>TeacherEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Template\CampusConfiguration.resx">
+      <DependentUpon>CampusConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Template\ConfigurationItem.resx">
+      <DependentUpon>ConfigurationItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Template\frmInputBox.resx">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Template\NameCreatorForm.resx">
+      <DependentUpon>NameCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmUpdateWeekday.resx">
+      <DependentUpon>frmUpdateWeekday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmCalendarQuery.resx">
+      <DependentUpon>frmCalendarQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmTeacherNoBusyQuery.resx">
+      <DependentUpon>frmTeacherNoBusyQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmAbsenceConfirm.resx">
+      <DependentUpon>frmAbsenceConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07_calendar.png" />
+    <None Include="Resources\代課通知單%28自訂%29.xls" />
+    <None Include="Resources\代課通知單.xls" />
+    <None Include="Resources\調代課通知單.xls" />
+    <None Include="Resources\調代通知單 .xls" />
+    <None Include="Resources\調課通知單.xls" />
+    <None Include="Resources\請假代課明細表.xls" />
+    <None Include="Resources\請假代課統計表.xls" />
+    <None Include="Resources\週代課通知單.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_office_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\設定.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_refresh_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CourseSchedule.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history_clock_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scientific_calculator_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classmate_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\不排課時段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代課查詢.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\調課.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\請假.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代課.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_remove_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeacherEx.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassEx.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_clock_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nursery_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablet_write_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\忙碌.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\缺課.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker_close_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_school_refresh_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_school_reload_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_search_128.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -518,5 +518,10 @@ namespace ischedulePlus
                 box.Checked = chkSelectAll.Checked;
             } 
         }
+
+        private void btnCheckDuplicate_Click(object sender, EventArgs e)
+        {
+            Query();
+        }
     }
 }

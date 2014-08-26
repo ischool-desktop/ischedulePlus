@@ -158,8 +158,8 @@ namespace ischedulePlus
                     #region
                     List<DateTime> DateTimes = mCourseCalendars.Select(x => x.StartDateTime).ToList();
 
-                    DateTime StartDateTime = DateTimes.Min();
-                    DateTime EndDateTime = DateTimes.Max();
+                    DateTime StartDateTime = DateTimes.Min().AddDays(-1);
+                    DateTime EndDateTime = DateTimes.Max().AddDays(1);
 
                     DataTable table = new DataTable();
 
@@ -168,7 +168,7 @@ namespace ischedulePlus
 
                     mCourseCalendarIDs = new Dictionary<string, string>();
 
-                    string strSQL = "select uid,start_date_time,teacher_name from $scheduler.course_calendar where  start_date_time>='" + StartDateTime.ToShortDateString() + "' and start_date_time<='" + EndDateTime.ToShortDateString() +"'";
+                    string strSQL = "select uid,start_date_time,teacher_name from $scheduler.course_calendar where  start_date_time>'" + StartDateTime.ToShortDateString() + "' and start_date_time<'" + EndDateTime.ToShortDateString() +"'";
 
                     table = mQueryHelper.Select(strSQL);
 

@@ -20,7 +20,7 @@ namespace ischedulePlus
             {
                 GradeYear = elmContent.AttributeText("GradeYear");
                 StartDate = K12.Data.DateTimeHelper.ParseDirect(elmContent.AttributeText("StartDate"));
-                EndDate = K12.Data.DateTimeHelper.ParseDirect(elmContent.AttributeText("EndDate")); 
+                EndDate = K12.Data.DateTimeHelper.ParseDirect(elmContent.AttributeText("EndDate"));
             }
         }
 
@@ -78,9 +78,9 @@ namespace ischedulePlus
 
                 foreach (XElement elmHoliday in Element.Elements("Holiday"))
                 {
-                   string Holiday = elmHoliday.Value;
+                    string Holiday = elmHoliday.Value;
 
-                    Holidays.Add(K12.Data.DateTimeHelper.ParseDirect(Holiday).ToShortDateString());                    
+                    Holidays.Add(K12.Data.DateTimeHelper.ParseDirect(Holiday).ToShortDateString());
                 }
             }
         }
@@ -109,10 +109,12 @@ namespace ischedulePlus
         /// 取得開始及結束日期
         /// </summary>
         /// <returns></returns>
-        public Tuple<DateTime,DateTime> GetStartEndDate()
+        public Tuple<DateTime, DateTime> GetStartEndDate()
         {
-            DateTime StartDateTime = DateTime.MaxValue;
-            DateTime EndDateTime = DateTime.MinValue;
+            //加減年是因為，最大、最小日期在後面運算後會產生超過日期可顯示範圍的問題。
+            //加個 10 年為防止此問題。
+            DateTime StartDateTime = DateTime.MaxValue.AddYears(-10);
+            DateTime EndDateTime = DateTime.MinValue.AddYears(10);
 
             foreach (GradeYearDate GradeYear in GradeYearDates.Values)
             {

@@ -47,6 +47,8 @@
             this.errStartTime = new System.Windows.Forms.ErrorProvider(this.components);
             this.errEndTime = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuCalendar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.鎖定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.解除鎖定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.停課ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.上課ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,8 +67,7 @@
             this.chkQueryByClass = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.pnlClass = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.lstClass = new System.Windows.Forms.ListBox();
-            this.鎖定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.解除鎖定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCheckDuplicate = new DevComponents.DotNetBar.ButtonItem();
             this.pnlQueryByDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEnd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateStart)).BeginInit();
@@ -387,6 +388,8 @@
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(212, 25);
             this.btnQuery.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnQuery.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnCheckDuplicate});
             this.btnQuery.TabIndex = 4;
             this.btnQuery.Text = "查詢";
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
@@ -445,54 +448,68 @@
             this.修改場地ToolStripMenuItem,
             this.刪除ToolStripMenuItem});
             this.menuCalendar.Name = "menuCalendar";
-            this.menuCalendar.Size = new System.Drawing.Size(153, 224);
+            this.menuCalendar.Size = new System.Drawing.Size(119, 202);
+            // 
+            // 鎖定ToolStripMenuItem
+            // 
+            this.鎖定ToolStripMenuItem.Name = "鎖定ToolStripMenuItem";
+            this.鎖定ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.鎖定ToolStripMenuItem.Text = "鎖定";
+            this.鎖定ToolStripMenuItem.Click += new System.EventHandler(this.鎖定ToolStripMenuItem_Click);
+            // 
+            // 解除鎖定ToolStripMenuItem
+            // 
+            this.解除鎖定ToolStripMenuItem.Name = "解除鎖定ToolStripMenuItem";
+            this.解除鎖定ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.解除鎖定ToolStripMenuItem.Text = "解除鎖定";
+            this.解除鎖定ToolStripMenuItem.Click += new System.EventHandler(this.解除鎖定ToolStripMenuItem_Click);
             // 
             // 停課ToolStripMenuItem
             // 
             this.停課ToolStripMenuItem.Name = "停課ToolStripMenuItem";
-            this.停課ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.停課ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.停課ToolStripMenuItem.Text = "停課";
             this.停課ToolStripMenuItem.Click += new System.EventHandler(this.停課ToolStripMenuItem_Click);
             // 
             // 上課ToolStripMenuItem
             // 
             this.上課ToolStripMenuItem.Name = "上課ToolStripMenuItem";
-            this.上課ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.上課ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.上課ToolStripMenuItem.Text = "上課";
             this.上課ToolStripMenuItem.Click += new System.EventHandler(this.上課ToolStripMenuItem_Click);
             // 
             // 修改ToolStripMenuItem
             // 
             this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.修改ToolStripMenuItem.Text = "修改日期";
             this.修改ToolStripMenuItem.Click += new System.EventHandler(this.修改日期ToolStripMenuItem_Click);
             // 
             // 修改節次ToolStripMenuItem
             // 
             this.修改節次ToolStripMenuItem.Name = "修改節次ToolStripMenuItem";
-            this.修改節次ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改節次ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.修改節次ToolStripMenuItem.Text = "修改節次";
             this.修改節次ToolStripMenuItem.Click += new System.EventHandler(this.修改節次ToolStripMenuItem_Click);
             // 
             // 修改教師ToolStripMenuItem
             // 
             this.修改教師ToolStripMenuItem.Name = "修改教師ToolStripMenuItem";
-            this.修改教師ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改教師ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.修改教師ToolStripMenuItem.Text = "修改教師";
             this.修改教師ToolStripMenuItem.Click += new System.EventHandler(this.修改教師ToolStripMenuItem_Click);
             // 
             // 修改場地ToolStripMenuItem
             // 
             this.修改場地ToolStripMenuItem.Name = "修改場地ToolStripMenuItem";
-            this.修改場地ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改場地ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.修改場地ToolStripMenuItem.Text = "修改場地";
             this.修改場地ToolStripMenuItem.Click += new System.EventHandler(this.修改場地ToolStripMenuItem_Click);
             // 
             // 刪除ToolStripMenuItem
             // 
             this.刪除ToolStripMenuItem.Name = "刪除ToolStripMenuItem";
-            this.刪除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.刪除ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.刪除ToolStripMenuItem.Text = "刪除";
             this.刪除ToolStripMenuItem.Click += new System.EventHandler(this.刪除ToolStripMenuItem_Click);
             // 
@@ -701,19 +718,12 @@
             this.lstClass.Size = new System.Drawing.Size(176, 106);
             this.lstClass.TabIndex = 0;
             // 
-            // 鎖定ToolStripMenuItem
+            // btnCheckDuplicate
             // 
-            this.鎖定ToolStripMenuItem.Name = "鎖定ToolStripMenuItem";
-            this.鎖定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.鎖定ToolStripMenuItem.Text = "鎖定";
-            this.鎖定ToolStripMenuItem.Click += new System.EventHandler(this.鎖定ToolStripMenuItem_Click);
-            // 
-            // 解除鎖定ToolStripMenuItem
-            // 
-            this.解除鎖定ToolStripMenuItem.Name = "解除鎖定ToolStripMenuItem";
-            this.解除鎖定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.解除鎖定ToolStripMenuItem.Text = "解除鎖定";
-            this.解除鎖定ToolStripMenuItem.Click += new System.EventHandler(this.解除鎖定ToolStripMenuItem_Click);
+            this.btnCheckDuplicate.GlobalItem = false;
+            this.btnCheckDuplicate.Name = "btnCheckDuplicate";
+            this.btnCheckDuplicate.Text = "查詢重覆";
+            this.btnCheckDuplicate.Click += new System.EventHandler(this.btnCheckDuplicate_Click);
             // 
             // frmCalendarQuery
             // 
@@ -795,5 +805,6 @@
         private System.Windows.Forms.ListBox lstClass;
         private System.Windows.Forms.ToolStripMenuItem 鎖定ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 解除鎖定ToolStripMenuItem;
+        private DevComponents.DotNetBar.ButtonItem btnCheckDuplicate;
     }
 }

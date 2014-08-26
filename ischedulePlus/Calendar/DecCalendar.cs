@@ -1612,18 +1612,24 @@ namespace ischedulePlus
         /// <returns></returns>
         private List<CalendarRecord> GetExchangeRecords(List<CalendarRecord> mSelectedCalendars)
         {
+            #region 進行空值檢查
+            if (K12.Data.Utility.Utility.IsNullOrEmpty(mSelectedCalendars))
+                return new List<CalendarRecord>();
+
             List<CalendarRecord> RemoveLockRecords = new List<CalendarRecord>();
 
+            //特別注意兩節狀態，若有一節鎖定，就會沒辦法調課
             foreach (CalendarRecord vCalendar in mSelectedCalendars)
             {
                 if (vCalendar.Lock.Trim().Equals("是"))
-                    RemoveLockRecords.Add(vCalendar);
+                    return new List<CalendarRecord>();
             }
 
-            RemoveLockRecords.ForEach(x => mSelectedCalendars.Remove(x));
+            //RemoveLockRecords.ForEach(x => mSelectedCalendars.Remove(x));
 
             if (K12.Data.Utility.Utility.IsNullOrEmpty(mSelectedCalendars))
                 return new List<CalendarRecord>();
+            #endregion
 
             Stopwatch mWatch = Stopwatch.StartNew();
 
@@ -2056,7 +2062,7 @@ namespace ischedulePlus
                     this.dataSource = Utility.GetPlaceCalendars(this.AssocID, SchoolYearSemesterOption.Instance.StartDate, SchoolYearSemesterOption.Instance.EndDate); 
                 }
 
-                FISCA.RTOut.WriteLine("資料時間：" + mWatch.ElapsedMilliseconds);
+                //FISCA.RTOut.WriteLine("資料時間：" + mWatch.ElapsedMilliseconds);
             };
 
             worker.RunWorkerCompleted += (sender, e) =>
@@ -2067,7 +2073,7 @@ namespace ischedulePlus
 
                 mWatch.Stop();
 
-                FISCA.RTOut.WriteLine("顯示時間：" + mWatch.ElapsedMilliseconds);
+                //FISCA.RTOut.WriteLine("顯示時間：" + mWatch.ElapsedMilliseconds);
             };
 
             worker.RunWorkerAsync();

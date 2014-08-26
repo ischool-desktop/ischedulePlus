@@ -309,12 +309,13 @@ namespace ischedulePlus
                     foreach (string vDateTime in mPrevCalendars.Keys)
                     {
                         cmbBeforeDate.Items.Add(vDateTime);
-
-                        if (vDateTime.Equals(mExchangePair.DateTime.ToShortDateString()))
-                            SelectedIndex = Index;
-
-                        Index++;
                     }
+
+                    string strExchangeDate = mExchangePair.DateTime.ToShortDateString();
+
+                    for (int i = 0; i < cmbBeforeDate.Items.Count;i++)
+                        if ((""+cmbBeforeDate.Items[i]).Equals(strExchangeDate))
+                            SelectedIndex = i;
 
                     cmbBeforeDate.SelectedIndex = SelectedIndex;
 

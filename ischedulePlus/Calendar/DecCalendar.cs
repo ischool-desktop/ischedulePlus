@@ -87,7 +87,7 @@ namespace ischedulePlus
             };
             CalendarEvents.WeekChangeEvent += (vsender, ve) =>
             {
-                if (ve.Type.Equals(this.Type) && 
+                if (ve.Type.Equals(this.Type) &&
                     ve.AssocID.Equals(this.AssocID))
                 {
                     this.SelectedCalendars = new List<CalendarRecord>();
@@ -100,10 +100,10 @@ namespace ischedulePlus
             #region 建立元件
             pnl.Controls.Clear();
 
-            PanelEx pnlCalendarControl = makePanel(string.Empty, string.Empty, new Point(), new Size(10,50));
+            PanelEx pnlCalendarControl = makePanel(string.Empty, string.Empty, new Point(), new Size(10, 50));
             pnlCalendarControl.Dock = DockStyle.Top;
 
-            btnPrevious = CreateButton(new Size(50, 25)); 
+            btnPrevious = CreateButton(new Size(50, 25));
             btnNext = CreateButton(new Size(50, 25));
 
             btnPrevious.Text = "上週";
@@ -112,7 +112,7 @@ namespace ischedulePlus
             {
                 SchoolYearSemesterOption.Instance.StartDate = SchoolYearSemesterOption.Instance.StartDate.AddDays(-7);
                 SchoolYearSemesterOption.Instance.EndDate = SchoolYearSemesterOption.Instance.EndDate.AddDays(-7);
-                CalendarEvents.RaiseWeekChangeEvent(this.Type,this.AssocID);
+                CalendarEvents.RaiseWeekChangeEvent(this.Type, this.AssocID);
             };
 
             btnNext.Text = "下週";
@@ -121,32 +121,32 @@ namespace ischedulePlus
             {
                 SchoolYearSemesterOption.Instance.StartDate = SchoolYearSemesterOption.Instance.StartDate.AddDays(7);
                 SchoolYearSemesterOption.Instance.EndDate = SchoolYearSemesterOption.Instance.EndDate.AddDays(7);
-                CalendarEvents.RaiseWeekChangeEvent(this.Type,this.AssocID);
+                CalendarEvents.RaiseWeekChangeEvent(this.Type, this.AssocID);
             };
 
             btnCurrent = CreateButton(new Size(50, 25));
             btnCurrent.Text = "本週";
             btnCurrent.Location = new Point(130, 10);
-            btnCurrent.Click += (sender,e)=>
+            btnCurrent.Click += (sender, e) =>
             {
                 SchoolYearSemesterOption.Instance.StartDate = DateTime.Now.StartOfWeek(DayOfWeek.Monday).ToDayStart();
                 SchoolYearSemesterOption.Instance.EndDate = SchoolYearSemesterOption.Instance.StartDate.AddDays(6);
-                CalendarEvents.RaiseWeekChangeEvent(this.Type,this.AssocID);
+                CalendarEvents.RaiseWeekChangeEvent(this.Type, this.AssocID);
             };
 
             ButtonX btnPrint = CreateButton(new Size(50, 25));
-            btnPrint.Location = new Point(190,10);
+            btnPrint.Location = new Point(190, 10);
             btnPrint.Text = "列印";
-            btnPrint.Click += (sender,e)=>
+            btnPrint.Click += (sender, e) =>
             {
                 if (this.Type.Equals(CalendarType.Teacher))
-                {                   
+                {
                     List<CalendarRecord> QueryResult = new List<CalendarRecord>();
 
                     DateTime dteStart = SchoolYearSemesterOption.Instance.StartDate;
                     DateTime dteEnd = SchoolYearSemesterOption.Instance.EndDate;
                     List<string> SelectedClassNames = new List<string>();
-                    List<string> SelectedTeacherNames = new List<string>(){AssocID};
+                    List<string> SelectedTeacherNames = new List<string>() { AssocID };
 
                     BackgroundWorker worker = new BackgroundWorker();
 
@@ -211,7 +211,7 @@ namespace ischedulePlus
                                 RelatedClassNames.Add(record.ClassName);
                                 RelatedTeacherNames.Add(record.TeacherName);
 
-                                if (record.ExchangeCalendar!=null)
+                                if (record.ExchangeCalendar != null)
                                     RelatedTeacherNames.Add(record.ExchangeCalendar.TeacherName);
                             }
                         }
@@ -736,7 +736,7 @@ namespace ischedulePlus
             txtStartDate.Width = 40;
             txtStartDate.TextChanged += (sender, e) =>
             {
-              string value = txtStartDate.Text;
+                string value = txtStartDate.Text;
                 if (string.IsNullOrEmpty(value)) //沒有資料就不作任何檢查。
                     return;
 
@@ -756,7 +756,7 @@ namespace ischedulePlus
                     SchoolYearSemesterOption.Instance.StartDate = dt.StartOfWeek(DayOfWeek.Monday);
                     SchoolYearSemesterOption.Instance.EndDate = SchoolYearSemesterOption.Instance.StartDate.AddDays(6);
                     txtStartDate.Text = SchoolYearSemesterOption.Instance.StartDate.Month + "/" + SchoolYearSemesterOption.Instance.StartDate.Day;
-                    CalendarEvents.RaiseWeekChangeEvent(this.Type,this.AssocID);
+                    CalendarEvents.RaiseWeekChangeEvent(this.Type, this.AssocID);
                 }
             };
 
@@ -843,7 +843,7 @@ namespace ischedulePlus
             {
                 DecPeriod Period = ctl.Tag as DecPeriod;
 
-                if (Period != null && 
+                if (Period != null &&
                     Period.IsBusy)
                 {
                     int vWeekday = Period.Weekday;
@@ -862,14 +862,14 @@ namespace ischedulePlus
                                 if (vPeriodSetting.IsIntersect(vTeacherBusy))
                                 {
                                     RemoveBusys.Add(vTeacherBusy);
-                                } 
+                                }
                             }
                         }
                     }
 
                     if (RemoveBusys.Count > 0)
                     {
- 
+
                     }
                 }
             }
@@ -905,7 +905,7 @@ namespace ischedulePlus
 
             records = records
                 .OrderBy(x => x.Weekday)
-                .ThenBy(x=> x.Period)
+                .ThenBy(x => x.Period)
                 .ToList();
 
             string vWeeekday = records[0].Weekday;
@@ -947,7 +947,7 @@ namespace ischedulePlus
                 int PeriodNo = e.Period;
 
                 //若是星期或節次小於或等於0則不繼續執行
-                if (WeekDay <= 0 || PeriodNo <= 0) return;                
+                if (WeekDay <= 0 || PeriodNo <= 0) return;
 
                 #region 若為可調課顏色則進行調課
                 if (Period.BackColor.Equals(SchedulerColor.lvSchedulableBackColor))
@@ -1072,7 +1072,7 @@ namespace ischedulePlus
 
                             if (strBuilder.Length > 0)
                             {
-                                FISCA.LogAgent.ApplicationLog.Log(Logs.調代課,Logs.調課作業, strBuilder.ToString());
+                                FISCA.LogAgent.ApplicationLog.Log(Logs.調代課, Logs.調課作業, strBuilder.ToString());
                                 MotherForm.SetStatusBarMessage("已成功執行調課！");
                                 CalendarEvents.RaiseExchangeEvent();
 
@@ -1082,7 +1082,7 @@ namespace ischedulePlus
                                 {
                                     SrcUIDs.AddRange(Pair.Calendar.Select(x => x.UID));
                                 }
-                                
+
                                 #region 是否列印調課單
                                 if (ExchangeConfirm.IsPrint)
                                 {
@@ -1128,7 +1128,7 @@ namespace ischedulePlus
                     }
                 }
                 else if (
-                    Period.IsBusy &&　
+                    Period.IsBusy &&
                     this.Type.Equals(CalendarType.Teacher))
                 {
                     int vWeekday = Period.Weekday;
@@ -1161,7 +1161,7 @@ namespace ischedulePlus
                     {
                         StringBuilder strBuilder = new StringBuilder();
                         StringBuilder strSQL = new StringBuilder();
-                        
+
                         strSQL.Append("select busy.uid,(CASE WHEN tea.nickname is null or tea.nickname='' THEN tea.teacher_name ELSE tea.teacher_name || '(' || tea.nickname || ')'  END) as teacher_name,begin_date_time,end_date_time from $scheduler.teacher_busy_date as busy inner join $scheduler.teacher_ex as tea on tea.uid=busy.ref_teacher_id where ");
 
                         foreach (TeacherBusy RemoveBusy in RemoveBusys)
@@ -1170,8 +1170,8 @@ namespace ischedulePlus
                             strSQL.Append("teacher_name='" + RemoveBusy.TeacherName + "' and begin_date_time='" + RemoveBusy.StartDateTime.GetDateTimeString() + "' and end_date_time='" + RemoveBusy.EndDateTime.GetDateTimeString() + "'");
                         }
 
-                        if (MessageBox.Show("您是否要刪除以下的不調代時段（此動作將無法復原）？" + System.Environment.NewLine + 
-                            strBuilder.ToString(), "刪除不調代時段提醒", MessageBoxButtons.YesNo) == 
+                        if (MessageBox.Show("您是否要刪除以下的不調代時段（此動作將無法復原）？" + System.Environment.NewLine +
+                            strBuilder.ToString(), "刪除不調代時段提醒", MessageBoxButtons.YesNo) ==
                             DialogResult.Yes)
                         {
                             BackgroundWorker workder = new BackgroundWorker();
@@ -1198,13 +1198,13 @@ namespace ischedulePlus
 
                                 int ExecuteCount = mUpdateHelper.Execute(strDelete.ToString());
 
-                                ApplicationLog.Log(Logs.調代課 ,Logs.刪除不調代時段,strBuilder.ToString());
+                                ApplicationLog.Log(Logs.調代課, Logs.刪除不調代時段, strBuilder.ToString());
                             };
 
                             workder.RunWorkerCompleted += (vsender, ve) =>
                             {
                                 if (ve.Error == null)
-                                    CalendarEvents.RaiseWeekChangeEvent(this.Type,this.AssocID);
+                                    CalendarEvents.RaiseWeekChangeEvent(this.Type, this.AssocID);
                                 else
                                     MessageBox.Show(ve.Error.Message);
                             };
@@ -1299,7 +1299,7 @@ namespace ischedulePlus
                         string SelectedTab = MainForm.Instance.GetSelectedType();
                         List<CalendarRecord> CalendarRecords = new List<CalendarRecord>();
 
-                        if (!string.IsNullOrEmpty(AssocType) && 
+                        if (!string.IsNullOrEmpty(AssocType) &&
                             !string.IsNullOrEmpty(AssocID))
                         {
                             if (AssocType.Equals("Teacher"))
@@ -1322,7 +1322,7 @@ namespace ischedulePlus
                                 switch (SelectedTab)
                                 {
                                     case "Teacher":
-                                        MainForm.Instance.OpenTeacherCalendarContent(CalendarType.Class,AssocID,true);
+                                        MainForm.Instance.OpenTeacherCalendarContent(CalendarType.Class, AssocID, true);
                                         break;
                                     case "Class":
                                         MainForm.Instance.OpenClassCalendarContent(CalendarType.Class, AssocID, true);
@@ -1378,7 +1378,7 @@ namespace ischedulePlus
         /// </summary>
         public string AssocID
         {
-            set 
+            set
             {
                 mAssocID = value;
             }
@@ -1415,7 +1415,7 @@ namespace ischedulePlus
         #endregion
 
         #region ==== Methods ======
-         
+
         /* 重新調整大小 */
         public void Resize()
         {
@@ -1537,9 +1537,9 @@ namespace ischedulePlus
             #region Originize Cells
             for (int i = 0; i < this.weekday; i++)
             {
-                for (int j = 0; j <  this.periods.Count; j++)
+                for (int j = 0; j < this.periods.Count; j++)
                 {
-                    string name = string.Format("{0}_{1}", (i + 1).ToString(),this.periods[j].Period);
+                    string name = string.Format("{0}_{1}", (i + 1).ToString(), this.periods[j].Period);
                     Point p = new Point(rowHeaderWidth + i * pnlWidth, colHeaderHeight + j * pnlHeight);
                     Size s = new Size(pnlWidth, pnlHeight);
 
@@ -1555,7 +1555,7 @@ namespace ischedulePlus
                     {
                         pnl = this.makePanel(name, "", p, s);
                         this.cells.Add(name, pnl);
-                        DecPeriod dec = new DecPeriod(pnl, i + 1, this.periods[j].Period,Type);
+                        DecPeriod dec = new DecPeriod(pnl, i + 1, this.periods[j].Period, Type);
                         dec.BackColor = Color.White;
                         this.decPeriods.Add(name, dec);
                         dec.OnPeriodClicked += new PeriodClickedHandler(dec_OnPeriodClicked);
@@ -1582,7 +1582,7 @@ namespace ischedulePlus
             foreach (CalendarRecord record in DesRecords)
             {
                 if (SrcRecord.IsIntersect(record))
-                    return true; 
+                    return true;
             }
 
             return false;
@@ -1690,9 +1690,9 @@ namespace ischedulePlus
 
             foreach (CalendarRecord Calendar in mSelectedCalendars)
             {
-    //            List<TeacherBusy> FindTeacherBusys = AllTeacherBusys
-    //.FindAll(x => Calendar.IsIntersect(x) &&
-    //    x.TeacherName.Equals(Calendar.TeacherName));
+                //            List<TeacherBusy> FindTeacherBusys = AllTeacherBusys
+                //.FindAll(x => Calendar.IsIntersect(x) &&
+                //    x.TeacherName.Equals(Calendar.TeacherName));
 
                 List<TeacherBusy> FindTeacherBusys = AllTeacherBusys
                     .FindAll(x => Calendar.IsIntersect(x));
@@ -1717,12 +1717,12 @@ namespace ischedulePlus
                 //檢查請假課程可否調到調課課程，在請假課程中的教師及場地有否衝突
                 //關鍵在於IsIntersect(x,ClassRecords)
                 List<CalendarRecord> TargetRecords = RelatedRecords
-                    .FindAll(x=>
+                    .FindAll(x =>
                         (
                             x.TeacherName.Equals(mSelectedCalendars[0].TeacherName)
                             || (!string.IsNullOrEmpty(x.ClassroomName) && x.ClassroomName.Equals(mSelectedCalendars[0].ClassroomName))
                         )
-                        && IsIntersect(x,ClassRecords));
+                        && IsIntersect(x, ClassRecords));
 
                 //尋找請假課程教師，在調課課程中是否有不調代時段
                 List<TeacherBusy> vTeacherBusys = AllTeacherBusys
@@ -1817,7 +1817,7 @@ namespace ischedulePlus
                 if (Record.Lock.Equals("是") ||
                     Record.Lock.ToUpper().Equals("Y") ||
                     Record.Lock.ToUpper().Equals("YES"))
-                    LockRecords.Add(Record);                
+                    LockRecords.Add(Record);
             }
 
             LockRecords.ForEach(x => ClassRecords.Remove(x));
@@ -1986,7 +1986,8 @@ namespace ischedulePlus
                 }
 
                 vStopwatch.Stop();
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -2013,7 +2014,7 @@ namespace ischedulePlus
 
                     if (!string.IsNullOrWhiteSpace(AssocID))
                     {
-                        TeacherBusys = Calendar.Instance.FindBusyTeacher(new List<string>(){this.AssocID}, SchoolYearSemesterOption.Instance.StartDate, SchoolYearSemesterOption.Instance.EndDate);
+                        TeacherBusys = Calendar.Instance.FindBusyTeacher(new List<string>() { this.AssocID }, SchoolYearSemesterOption.Instance.StartDate, SchoolYearSemesterOption.Instance.EndDate);
                     }
                 }
                 else if (this.Type.Equals(CalendarType.Class))
@@ -2044,22 +2045,22 @@ namespace ischedulePlus
                         .FindAll(x => x.ClassName.Equals(AssocID));
 
                     this.ClassBusys = Calendar.Instance.FindBusyClass(
-                        new List<string>(){AssocID}, 
+                        new List<string>() { AssocID },
                         SchoolYearSemesterOption.Instance.StartDate,
                         SchoolYearSemesterOption.Instance.EndDate);
 
-                    List<string> TeacherNames = this.dataSource.Select(x=>x.TeacherName).Distinct().ToList();
+                    List<string> TeacherNames = this.dataSource.Select(x => x.TeacherName).Distinct().ToList();
 
                     this.relatedTeacherBusys = Calendar.Instance.FindBusyTeacher(
-                        TeacherNames, 
-                        SchoolYearSemesterOption.Instance.StartDate, 
+                        TeacherNames,
+                        SchoolYearSemesterOption.Instance.StartDate,
                         SchoolYearSemesterOption.Instance.EndDate);
 
                     mWatch.Stop();
                 }
                 else if (this.Type.Equals(CalendarType.Classroom))
                 {
-                    this.dataSource = Utility.GetPlaceCalendars(this.AssocID, SchoolYearSemesterOption.Instance.StartDate, SchoolYearSemesterOption.Instance.EndDate); 
+                    this.dataSource = Utility.GetPlaceCalendars(this.AssocID, SchoolYearSemesterOption.Instance.StartDate, SchoolYearSemesterOption.Instance.EndDate);
                 }
 
                 //FISCA.RTOut.WriteLine("資料時間：" + mWatch.ElapsedMilliseconds);

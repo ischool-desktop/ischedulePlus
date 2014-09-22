@@ -333,6 +333,10 @@ namespace ischedulePlus
                     mAccessHelper.DeletedValues(vTeacherBusys);
                 #endregion
 
+                //這行應該要放在 DecCalendar 但因為事件缺少參數，放過去無法同步資料。
+                if (Calendar.Instance.Teachers.ContainsKey(Key))
+                    Calendar.Instance.Teachers.Remove(Key);
+
                 CalendarEvents.RaiseTeacherUpdateEvent();
 
                 return "已刪除教師「" + vTeacher.FullTeacherName + "」及「" + vTeacherBusys.Count + "」筆教師不排課時段!";

@@ -791,7 +791,7 @@ namespace ischedulePlus
             #endregion
 
             #region 星期節次
-            Campus.Configuration.ConfigData config = Campus.Configuration.Config.User["CalendarOption"];
+            Campus.Configuration.ConfigData config = Campus.Configuration.Config.App["CalendarOption"];
 
             string vWeekday = config["Weekday"];
             string vPeriods = config["PeriodList"];

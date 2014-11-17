@@ -175,5 +175,17 @@ namespace ischedulePlus
                 return FISCA.Permission.UserAcl.Current[產生班級不調代時段].Executable;
             }
         }
+
+        public static string 假別管理 { get { return "498EF770-AAE0-45BF-97D7-882C7ABBDD1A"; } }
+        public static bool 假別管理權限
+        {
+            get { return FISCA.Permission.UserAcl.Current[假別管理].Executable; }
+        }
+
+        public static string 行事曆設定 { get { return "7D67ABE1-AA76-4854-8B15-3FEC394D938C"; } }
+        public static bool 行事曆設定權限
+        {
+            get { return FISCA.Permission.UserAcl.Current[行事曆設定].Executable; }
+        }
     }
 }

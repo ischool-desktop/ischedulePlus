@@ -2019,6 +2019,8 @@ namespace ischedulePlus
                 }
                 else if (this.Type.Equals(CalendarType.Class))
                 {
+                    //List<CalendarRecord> ClassRelatedRecords = Utility.GetClassCalendars(AssocID, SchoolYearSemesterOption.Instance.StartDate, SchoolYearSemesterOption.Instance.EndDate);
+
                     List<CalendarRecord> ClassRelatedRecords = Calendar.Instance
                         .FindExchangeRelated(AssocID, SchoolYearSemesterOption.Instance.StartDate,
                         SchoolYearSemesterOption.Instance.EndDate);

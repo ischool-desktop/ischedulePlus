@@ -45,12 +45,12 @@ namespace ischedulePlus
                 cd[name] = "false";
             }
             //檢查是否為布林
-            bool.TryParse(cd[name], out checkClubUDT);           
+            bool.TryParse(cd[name], out checkClubUDT);
 
             if (!checkClubUDT)
             {
                 SchemaManager Manager = new SchemaManager(FISCA.Authentication.DSAServices.DefaultConnection);
-                
+
                 Manager.SyncSchema(new SchoolYearSemesterDate());
                 Manager.SyncSchema(new CourseCalendar());
                 Manager.SyncSchema(new TeacherBusyDate());
@@ -138,22 +138,25 @@ namespace ischedulePlus
             //MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["匯入課程行事曆"].Enable = Permissions.匯入課程行事曆權限;
 
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["ischedule排課課表匯出"].Click += (sender, e) => new frmScheduleExport().ShowDialog();
+            MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["ischedule排課課表匯出"].Enable = Permissions.產生課程行事曆權限;
 
+            MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"].Enable = FISCA.Permission.UserAcl.Current["ischedulePlus.Ribbon0030"].Executable; ;
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"]["連線設定"].Image = Properties.Resources.設定;
-            MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"]["連線設定"].Enable = FISCA.Permission.UserAcl.Current["ischedulePlus.Ribbon0030"].Executable;
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"]["連線設定"].Click += (sender, e) => new frmFoxproConnectionSetup().ShowDialog();
 
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"]["課表匯出"].Image = Properties.Resources.Export_Image;
-            MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"]["課表匯出"].Enable = FISCA.Permission.UserAcl.Current["ischedulePlus.Ribbon0030"].Executable;
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["新民排課課表匯出"]["課表匯出"].Click += (sender, e) => new frmFoxproCreateWeekCourseSection().ShowDialog();
 
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["欣河排課課表匯出"].Click += (sender, e) => new frmExportShinHer().ShowDialog();
+            MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["欣河排課課表匯出"].Enable = Permissions.產生課程行事曆權限;
 
+            MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["行事曆設定"].Enable = Permissions.行事曆設定權限;
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["行事曆設定"]["教師"].Click += (sender, e) => new frmCalendarOption(CalendarOption.GetTeacherOption()).ShowDialog();
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["行事曆設定"]["班級"].Click += (sender, e) => new frmCalendarOption(CalendarOption.GetClassOption()).ShowDialog();
             MotherForm.RibbonBarItems["調代課", "設定"]["行事曆"]["行事曆設定"]["場地"].Click += (sender, e) => new frmCalendarOption(CalendarOption.GetClassroomOption()).ShowDialog();
 
             MotherForm.RibbonBarItems["調代課", "設定"]["假別"].Image = Resources.tablet_write_64;
+            MotherForm.RibbonBarItems["調代課", "設定"]["假別"].Enable = Permissions.假別管理權限;
             MotherForm.RibbonBarItems["調代課", "設定"]["假別"].Click += (sender, e) => new frmAbsence().ShowDialog();
 
             #endregion
@@ -234,7 +237,7 @@ namespace ischedulePlus
                             strBuilder.AppendLine("《缺課註記》");
                             strBuilder.AppendLine(Comment);
 
-                            ApplicationLog.Log(Logs.調代課,Logs.缺課作業, strBuilder.ToString());
+                            ApplicationLog.Log(Logs.調代課, Logs.缺課作業, strBuilder.ToString());
 
                             CalendarEvents.RaiseReplaceEvent();
 
@@ -506,6 +509,8 @@ namespace ischedulePlus
             AdminCatalog.Add(new RibbonFeature(Permissions.教師管理, "教師管理"));
             AdminCatalog.Add(new RibbonFeature(Permissions.班級管理, "班級管理"));
             AdminCatalog.Add(new RibbonFeature(Permissions.學期設定, "學期設定"));
+            AdminCatalog.Add(new RibbonFeature(Permissions.假別管理, "假別管理"));
+            AdminCatalog.Add(new RibbonFeature(Permissions.行事曆設定, "行事曆設定"));
 
             AdminCatalog.Add(new RibbonFeature(Permissions.連線學校, "連線學校"));
             //AdminCatalog.Add(new RibbonFeature(Permissions.匯入課程行事曆, "匯入課程行事曆"));

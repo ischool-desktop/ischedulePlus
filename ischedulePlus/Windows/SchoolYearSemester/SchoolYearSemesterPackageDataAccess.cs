@@ -146,8 +146,8 @@ namespace ischedulePlus
             if (Keys.Length!=2)
                 return "學年度學期資料不完整「" + Keys[0] +" " + Keys[1] +"」";
 
-            string SchoolYear = Keys[0];
-            string Semester = Keys[1];
+            string SchoolYear = Keys[0].Replace("學年度", "");
+            string Semester = Keys[1].Replace("學期", "");
             string strCondition = "schoolyear='" + SchoolYear + "' and semester='" + Semester + "'";
 
             List<SchoolYearSemesterDate> SchoolYearSemesters = mAccessHelper.Select<SchoolYearSemesterDate>(strCondition);

@@ -64,7 +64,9 @@ namespace ischedulePlus
             {
                 string strDateTime = PackageRecords[i].StartDateTime.GetDateTimeString();
                 string strTeacherName = PackageRecords[i].TeacherName;
-                string Key = strTeacherName + "^_^" + strDateTime;
+
+                //主key增加班級名稱
+                string Key = strTeacherName + "^_^" + strDateTime + "^_^" + PackageRecords[i].ClassName;
 
                 if (mCourseCalendarIDs.ContainsKey(Key))
                     UIDs.Add(mCourseCalendarIDs[Key]);
@@ -88,7 +90,8 @@ namespace ischedulePlus
 
             foreach(CourseCalendar Calendar in CourseCalendars)
             {
-                string Key = Calendar.StartDateTime.GetDateTimeString() + "^_^" +Calendar.TeacherName;
+                //主key增加班級
+                string Key = Calendar.StartDateTime.GetDateTimeString() + "^_^" + Calendar.TeacherName + "^_^" + Calendar.ClassName;
 
                 if (!DicCourseCalendars.ContainsKey(Key))
                     DicCourseCalendars.Add(Key,Calendar);
@@ -100,7 +103,8 @@ namespace ischedulePlus
 
             foreach (CourseCalendar record in PackageRecords)
             {
-                string Key = record.StartDateTime.GetDateTimeString() + "^_^" + record.TeacherName;
+                //主key增加班級
+                string Key = record.StartDateTime.GetDateTimeString() + "^_^" + record.TeacherName + "^_^" + record.ClassName;
 
                 if (DicCourseCalendars.ContainsKey(Key))
                 {
@@ -168,7 +172,8 @@ namespace ischedulePlus
 
                     mCourseCalendarIDs = new Dictionary<string, string>();
 
-                    string strSQL = "select uid,start_date_time,teacher_name from $scheduler.course_calendar where  start_date_time>'" + StartDateTime.ToShortDateString() + "' and start_date_time<'" + EndDateTime.ToShortDateString() +"'";
+                    //新增班級欄位
+                    string strSQL = "select uid,start_date_time,teacher_name,class_name from $scheduler.course_calendar where  start_date_time>'" + StartDateTime.ToShortDateString() + "' and start_date_time<'" + EndDateTime.ToShortDateString() +"'";
 
                     table = mQueryHelper.Select(strSQL);
 
@@ -177,10 +182,16 @@ namespace ischedulePlus
                         string uid = row.Field<string>("uid");
                         string start_date_time = DateTime.Parse(row.Field<string>("start_date_time")).GetDateTimeString();
                         string teacher_name = row.Field<string>("teacher_name");
-                        string key = teacher_name + "^_^" + start_date_time;
+
+                        //新增班級欄位
+                        string class_name = row.Field<string>("class_name");
+                        //主key增加班級名稱
+                        string key = teacher_name + "^_^" + start_date_time + "^_^" + class_name;
 
                         if (!mCourseCalendarIDs.ContainsKey(key))
                             mCourseCalendarIDs.Add(key, uid);
+                        else
+                            System.Diagnostics.Debug.Print("重複惹!!!");
                     }
 
                     //#region 分頁操作，先暫不使用，怪怪的

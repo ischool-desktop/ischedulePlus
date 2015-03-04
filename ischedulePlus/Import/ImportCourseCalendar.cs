@@ -10,6 +10,9 @@ using FISCA.UDT;
 
 namespace ischedulePlus
 {
+    /// <summary>
+    /// 沒在使用了(2015/2/12 耀明)。
+    /// </summary>
     public class ImportCourseCalendar : ImportWizard
     {
         private const string constCourseName = "課程名稱";
